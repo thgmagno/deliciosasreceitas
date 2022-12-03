@@ -99,6 +99,7 @@ input:focus{
     background-color: rgba(25, 32, 25, 1);
     border: solid 1px #fff;
     color: #fff;
+    margin-top: 10px;
 }
 
 #entrar:active{
