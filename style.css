@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    font-size: 1.1rem;
 }
 
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background-color: #333;
 }
 
@@ -25,12 +26,11 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     background-color: #ff914d;
 }
 
 header img{
-    width: 128px;
+    width: 8rem;
 }
 
 main{
@@ -40,81 +40,99 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
-    
     background-color: rgba(25, 32, 25, 1);
 }
 
-input{
-    height: 6%;
-    position: absolute;
-    padding: 2% 5%;
-    font-size: 120%;
-    width: 60%;
+#login{
+    margin-top: 8vh;
+    width: 75%;
+    max-width: 520px;
+}
 
+#email{
+    margin-bottom: 2vh;
+}
+
+#button{
+    width: 75%;
+    max-width: 520px;
+}
+
+input{
+    width: 100%;
+    padding: 8px 8px 8px 12px;
+    display: block;
+    margin-top: 1rem;
     border-radius: 4px;
     border: none;
     box-shadow: 0 0 2em rgb( 0 0 0 / .3);
     background-color: #fff;
+}
+
+label{
+    position: relative;
+    top: 10px;
+    font-size: .8rem;
+    color: #fff;
 }
 
 input:focus{
     outline: none;
 }
 
-#user{
-    top: 15%;
-}
-
-#password{
-    top: 30%;
-}
-
 #recuperar, #entrar, #registrar{
-    position: absolute;
-    padding: 2% 5%;
-    font-size: 120%;
-    width: 70%;
-    
+    cursor: pointer;
+    padding: 8px;
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
     border-radius: 4px;
     text-decoration: none;
     color: rgb( 0 0 0 / .7);
-    
+}
+
+#recuperar:hover, #entrar:hover, #registrar:hover{
+    color: #ff914d;
+    transition: .5s;
+}
+
+#entrar:hover{
+    background-color: #ff914d;
+    color: #333;
+}
+
+#registrar:hover{
+    border: #ff914d 1px solid;
 }
 
 #recuperar{
-    top: 45%;
     background-color: rgba(25, 32, 25, 1);
     box-shadow: none;
     color: #fff;
     border: none;
+    font-size: .8rem;
+    position: relative;
+    top: 5px;
 }
+
 #entrar{
-    top: 56%;
     border: none;
     box-shadow: 0 0 2em rgb( 0 0 0 / .3);
     background-color: #fff;
 }
 #registrar{
-    top: 67%;
-    background-color: rgba(25, 32, 25, 1);
     border: solid 1px #fff;
     color: #fff;
-    margin-top: 10px;
-}
-
-#entrar:active{
-    font-size: 120%;
-    
-    background-color: #cffbda;
+    background-color: rgba(25, 32, 25, 1);
 }
 
 footer{
     height: 5vh;
-    min-height: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-   
+    line-height: 5vh;
+    text-align: center;
     background-color: #ff914d;
+}
+
+p{
+    font-size: .8rem;
 }
