@@ -52,6 +52,7 @@ main{
 
 button{
     border: none;
+    cursor: pointer;
     
     border-radius: 4px;
     background-color: #fff;
@@ -64,6 +65,7 @@ button{
     height: 10vh;
     min-height: 80px;
     margin: 8px;
+    cursor: pointer;
 
     display: block;
     
@@ -75,7 +77,8 @@ button{
 }
 
 .item:hover {
-    background-color: #55AA55;
+    background-color: #ff914d;
+    color: #333;
 }
 
 .item:active{
@@ -111,6 +114,7 @@ dialog{
 #close{
     width: 28px;
     filter: invert(1);
+    cursor: pointer;
 }
 
 #close:active{
@@ -129,6 +133,7 @@ dialog{
     position: absolute;
     width: 32px;
     left: 20px;
+    cursor: pointer;
 }
 
 #config:active{

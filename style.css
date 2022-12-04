@@ -136,3 +136,20 @@ footer{
 p{
     font-size: .8rem;
 }
+
+.loading{
+    background-color: rgba( 0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    line-height: 100vh;
+    text-align: center;
+}
+
+.label{
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 15px;
+    padding: 8px 12px;
+}

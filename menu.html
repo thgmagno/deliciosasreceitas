@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas Saborosas</title>
+    <title>Home - Receitas Saborosas</title>
     <link rel="stylesheet" href="style_menu.css">
     <link rel="icon" href="chefe-de-cozinha.png">
     <script src="script.js" defer></script>
@@ -15,18 +15,18 @@
     <div id="main_content">
         <header>
             <img id="logo" src="logotipo.png">
-            <img id="config" src="cardapio.png">
+            <img id="config" src="cardapio.png" onclick="openModal()">
         </header>
         
         
         <main>
             <dialog> 
-                <img id="close" src="botao-fechar.png">
+                <img id="close" src="botao-fechar.png" onclick="closeModal()">
                 <button id="create" class="dialog">
                     <img src="add.png">
                     Adicionar<br>nova receita
                 </button>
-                <button id="sair" class="dialog">
+                <button id="sair" class="dialog" onclick="logout()">
                     <img src="logout.png">    
                     Sair
                 </button>
@@ -57,7 +57,7 @@
                 <p>1 pct de miojo</p>
             </button>
         </main>
-        
     </div>
+
 </body>
 </html>

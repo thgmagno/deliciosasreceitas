@@ -1,19 +1,38 @@
-const button = document.getElementById('config')
-const close = document.getElementById('close')
 const modal = document.querySelector('dialog')
 
-button.onclick = function() {
+function openModal(){
     modal.show()
 }
 
-close.onclick = function() {
+function closeModal(){
     modal.close()
 }
 
-const logout = document.getElementById('sair')
+function login(){
+    showLoading();
+    firebase.auth().signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('password').value).then(response => {
+        hideLoading();
+        window.location.href = "menu.html";
+        }).catch(error => {
+            hideLoading();
+            alert(getErrorMessage(error));});
+}
 
-logout.addEventListener('click', function(e){
-    e.preventDefault();
+function getErrorMessage(error){
+    if (error.code == "auth/user-not-found"){
+        return "Nenhum usuário encontrado. Verifique o seu e-mail e senha, ou selecione a opção Registrar.";
+    }
+    return error.message;
+}
 
-    window.location.replace('index.html')
-})
+function register(){
+    window.location.href = "register.html"
+}
+
+function logout(){
+    var r=confirm("Deseja sair da conta?");
+    if (r==true)
+    {
+        window.location.href = "index.html";
+    }
+}
