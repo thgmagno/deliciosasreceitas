@@ -29,11 +29,15 @@ function register(){
     window.location.href = "register.html"
 }
 
-function logout(){
+async function logout(){
     var r=confirm("Deseja sair da conta?");
-    if (r==true)
-    {
-        firebase.auth().logout();
-        window.location.href = "index.html";
-    }
+    if (r==true){
+        try {
+    await firebase.auth().signOut();
+    // signed out
+    window.location.href = "index.html";
+    } catch (e){
+    // an error
+    alert("error");
+} 
 }
