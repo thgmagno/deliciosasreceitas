@@ -33,6 +33,7 @@ function logout(){
     var r=confirm("Deseja sair da conta?");
     if (r==true)
     {
+        firebase.auth().logout();
         window.location.href = "index.html";
     }
 }
